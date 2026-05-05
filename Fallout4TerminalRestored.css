@@ -1,0 +1,1537 @@
+/**
+ * @name Fallout 4 Terminal (Restored)
+ * @author ThatKingKai
+ * @version 1.0.0
+ * @description A theme inspired by Fallout 4's terminals, restored by ThatKingKai
+ * @note Standalone build.
+ * @authorId 114678873605668873
+ * @invite XRnuHY5uuS
+*/
+
+/* ========================================================================== */
+/* === Local defaults used before the inlined upstream theme parses ========== */
+/* ========================================================================== */
+
+:root,
+.visual-refresh,
+.visual-refresh.theme-dark {
+  --rgb-highlight: 74, 239, 152;
+  --rgb-background: 0, 9, 0;
+  --rgb-text: 158, 239, 152;
+  --departure-font: "DepartureMono Nerd Font", "DepartureMono Nerd Font Mono", "Departure Mono Nerd Font", monospace;
+  --departure-font-size: 13px;
+}
+
+/* ========================================================================== */
+/* === Inlined Fallout 4 Terminal mainRewrite.css ============================ */
+/* ========================================================================== */
+
+:root,
+.visual-refresh,
+.visual-refresh.theme-dark {
+  --highlight: rgb(var(--rgb-highlight));
+  --rgb-background: 0, 9, 0;
+  --background: rgb(var(--rgb-background));
+  --text: rgb(var(--rgb-text));
+  --rgb-close-button: 212, 18, 39;
+  --close-button: rgb(var(--rgb-close-button));
+  --rgb-online-color: 57, 255, 20;
+  --online-color: rgb(var(--rgb-online-color));
+  --rgb-afk-color: 255, 255, 51;
+  --afk-color: rgb(var(--rgb-afk-color));
+  --rgb-dnd-color: 255, 0, 0;
+  --dnd-color: rgb(var(--rgb-dnd-color));
+  --rgb-streaming-color: 188, 19, 254;
+  --streaming-color: rgb(var(--rgb-streaming-color));
+  --scrollbar-thin-thumb: var(--highlight);
+  --scrollbar-auto-thumb: var(--highlight);
+  --scrollbar-auto-scrollbar-color-thumb: var(--highlight);
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-track: transparent;
+  --transition-time: 0.3s;
+  --background-image: unset;
+  --background-position: center;
+  --background-size: cover;
+  --background-blur: 5px;
+  --background-brightness: 100%;
+  --show-original-title: 0;
+  --show-custom-title: 1;
+  --custom-title-text: "ROBCO Industries (tm)";
+  --custom-title-font-size: 16px;
+  --custom-title-font-weight: bold;
+  --custom-title-margin-top: 0px;
+  --custom-title-margin-left: 0px;
+  --background-primary: var(--background);
+  --background-mobile-primary: var(--background);
+  --background-secondary: var(--background) !important;
+  --background-mobile-secondary: var(--background);
+  --background-secondary-alt: var(--background);
+  --background-tertiary: var(--background);
+  --background-accent: var(--background);
+  --background-floating: var(--background);
+  --background-nested-floating: var(--background);
+  --background-modifier-accent: rgba(var(--rgb-highlight), 20%);
+  --background-modifier-hover: rgba(var(--rgb-highlight), 10%);
+  --background-modifier-active: rgba(var(--rgb-highlight), 30%);
+  --background-modifier-selected: var(--rgb-highlight);
+  --background-base-lowest: var(--background);
+  --background-base-low: var(--background);
+  --background-surface-high: var(--background);
+  --modal-background: var(--background);
+  --modal-footer-background: var(--background);
+  --background-floating: var(--background);
+  --bg-surface-overlay: var(--background);
+  --activity-card-background: var(--background);
+  --header-primary: var(--highlight);
+  --header-secondary: var(--highlight);
+  --chat-background: var(--background);
+  --chat-border: var(--highlight);
+  --chat-input-container-background: var(--background);
+  --spoiler-hidden-background: var(--highlight);
+  --spoiler-revealed-background: rgba(var(--rgb-highlight), 20%);
+  --input-background: var(--background);
+  --textbox-markdown-syntax: var(--highlight);
+  --logo-primary: var(--highlight);
+  --control-brand-foreground: var(--highlight);
+  --control-brand-foreground-new: var(--highlight);
+  --background-mentioned: rgba(var(--rgb-highlight), 30%);
+  --background-mentioned-hover: rgba(var(--rgb-highlight), 40%);
+  --background-message-hover: rgba(var(--rgb-highlight), 10%);
+  --background-message-highlight: rgba(var(--rgb-highlight), 30%);
+  --background-message-highlight-hover: rgba(var(--rgb-highlight), 40%);
+  --background-message-automod: rgba(var(--rgb-highlight), 20%);
+  --background-message-automod-hover: rgba(var(--rgb-highlight), 40%);
+  --channeltextarea-background: var(--background);
+  --text-link: var(--highlight);
+  --text-link-low-saturation: rgba(var(--rgb-highlight), 50%);
+  --text-positive: var(--online-color);
+  --text-warning: var(--afk-color);
+  --text-danger: var(--dnd-color);
+  --text-brand: var(--highlight);
+  --text-normal: var(--text);
+  --text-muted: var(--text);
+  --channels-default: var(--text);
+  --button-danger-background-disabled: rgba(var(--rgb-close-button), 20%);
+  --button-danger-background: rgba(var(--rgb-close-button), 20%);
+  --button-danger-background-hover: rgba(var(--rgb-close-button), 70%);
+  --button-danger-background-active: rgba(var(--rgb-close-button), 100%);
+  --button-outline-danger-border: rgba(var(--rgb-close-button), 50%);
+  --button-outline-danger-background: rgba(var(--rgb-close-button), 50%);
+  --button-outline-danger-background-hover: rgba(var(--rgb-close-button), 70%);
+  --button-outline-danger-background-active: rgba(var(--rgb-close-button), 100%);
+  --button-outline-danger-text: rgba(var(--rgb-close-button), 50%);
+  --button-outline-danger-text-hover: rgba(var(--rgb-close-button), 70%);
+  --button-outline-danger-text-active: rgba(var(--rgb-close-button), 100%);
+  --button-outline-danger-border-hover: rgba(var(--rgb-close-button), 70%);
+  --button-outline-danger-border-active: rgba(var(--rgb-close-button), 100%);
+  --button-positive-background-disabled: rgba(var(--rgb-online-color), 20%);
+  --button-positive-background: rgba(var(--rgb-online-color), 20%);
+  --button-positive-background-hover: rgba(var(--rgb-online-color), 70%);
+  --button-positive-background-active: rgba(var(--rgb-online-color), 100%);
+  --button-outline-positive-border: rgba(var(--rgb-online-color), 50%);
+  --button-outline-positive-background: rgba(var(--rgb-online-color), 50%);
+  --button-outline-positive-background-hover: rgba(var(--rgb-online-color), 70%);
+  --button-outline-positive-background-active: rgba(var(--rgb-online-color), 100%);
+  --button-outline-positive-text: rgba(var(--rgb-online-color), 50%);
+  --button-outline-positive-text-hover: rgba(var(--rgb-online-color), 70%);
+  --button-outline-positive-text-active: rgba(var(--rgb-online-color), 100%);
+  --button-outline-positive-border-hover: rgba(var(--rgb-online-color), 70%);
+  --button-outline-positive-border-active: rgba(var(--rgb-online-color), 100%);
+  --button-primary-background-disabled: rgba(var(--rgb-highlight), 20%);
+  --button-primary-background: rgba(var(--rgb-highlight), 20%);
+  --button-primary-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-primary-background-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-primary-border: rgba(var(--rgb-highlight), 50%);
+  --button-outline-primary-background: rgba(var(--rgb-highlight), 50%);
+  --button-outline-primary-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-primary-background-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-primary-text: rgba(var(--rgb-highlight), 50%);
+  --button-outline-primary-text-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-primary-text-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-primary-border-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-primary-border-active: rgba(var(--rgb-highlight), 100%);
+  --button-secondary-background-disabled: rgba(var(--rgb-highlight), 20%);
+  --button-secondary-background: rgba(var(--rgb-highlight), 20%);
+  --button-secondary-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-secondary-background-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-secondary-border: rgba(var(--rgb-highlight), 50%);
+  --button-outline-secondary-background: rgba(var(--rgb-highlight), 50%);
+  --button-outline-secondary-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-secondary-background-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-secondary-text: rgba(var(--rgb-highlight), 50%);
+  --button-outline-secondary-text-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-secondary-text-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-secondary-border-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-secondary-border-active: rgba(var(--rgb-highlight), 100%);
+  --button-brand-background-disabled: rgba(var(--rgb-highlight), 20%);
+  --button-brand-background: rgba(var(--rgb-highlight), 20%);
+  --button-brand-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-brand-background-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-brand-border: rgba(var(--rgb-highlight), 50%);
+  --button-outline-brand-background: rgba(var(--rgb-highlight), 50%);
+  --button-outline-brand-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-brand-background-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-brand-text: rgba(var(--rgb-highlight), 50%);
+  --button-outline-brand-text-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-brand-text-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-brand-border-hover: rgba(var(--rgb-highlight), 70%);
+  --button-outline-brand-border-active: rgba(var(--rgb-highlight), 100%);
+  --button-filled-brand-background: rgba(var(--rgb-highlight), 20%);
+  --button-filled-brand-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-filled-brand-background-border: rgba(var(--rgb-highlight), 50%);
+  --button-filled-brand-background-active: rgba(var(--rgb-highlight), 100%);
+  --button-outline-danger-text: var(--rgb-text);
+  --button-outline-danger-text-hover: var(--rgb-text);
+  --button-outline-danger-text-active: var(--rgb-text);
+  --search-popout-option-user-nickname: var(--highlight);
+  --search-popout-option-user-username: rgba(var(--rgb-highlight), 70%);
+  --search-popout-option-filter-text: rgba(var(--rgb-highlight), 70%);
+  --search-popout-date-picker-border: 1px solid var(--highlight);
+  --interactive-muted: rgba(var(--rgb-highlight), 20%);
+  --interactive-normal: rgba(var(--rgb-highlight), 50%);
+  --interactive-hover: rgba(var(--rgb-highlight), 100%);
+  --interactive-active: rgb(var(--rgb-highlight));
+  --status-danger: var(--dnd-color);
+  --status-warning: var(--afk-color);
+  --status-positive: var(--online-color);
+  --profile-gradient-primary-color: var(--rgb-background);
+  --profile-gradient-secondary-color: var(--rgb-background);
+  --bg-brand: var(--highlight);
+  --brand-experiment: var(--highlight);
+  --brand-experiment-100: var(--highlight);
+  --brand-experiment-130: var(--highlight);
+  --brand-experiment-160: var(--highlight);
+  --brand-experiment-200: var(--highlight);
+  --brand-experiment-230: var(--highlight);
+  --brand-experiment-260: var(--highlight);
+  --brand-experiment-300: var(--highlight);
+  --brand-experiment-330: var(--highlight);
+  --brand-experiment-360: var(--highlight);
+  --brand-experiment-400: var(--highlight);
+  --brand-experiment-430: var(--highlight);
+  --brand-experiment-460: var(--highlight);
+  --brand-experiment-500: var(--highlight);
+  --brand-experiment-530: var(--highlight);
+  --brand-experiment-560: var(--highlight);
+  --brand-experiment-600: var(--highlight);
+  --brand-experiment-630: var(--highlight);
+  --brand-experiment-660: var(--highlight);
+  --brand-experiment-700: var(--highlight);
+  --brand-experiment-730: var(--highlight);
+  --brand-experiment-760: var(--highlight);
+  --brand-experiment-800: var(--highlight);
+  --brand-experiment-830: var(--highlight);
+  --brand-experiment-860: var(--highlight);
+  --brand-experiment-900: var(--highlight);
+  --brand-experiment-930: var(--highlight);
+  --brand-experiment-960: var(--highlight);
+  --brand-experiment-05a: var(--highlight);
+  --brand-experiment-10a: var(--highlight);
+  --brand-experiment-15a: var(--highlight);
+  --brand-experiment-20a: var(--highlight);
+  --brand-experiment-25a: var(--highlight);
+  --brand-experiment-30a: var(--highlight);
+  --brand-experiment-35a: var(--highlight);
+  --brand-experiment-40a: var(--highlight);
+  --brand-experiment-45a: var(--highlight);
+  --brand-experiment-50a: var(--highlight);
+  --brand-experiment-55a: var(--highlight);
+  --brand-experiment-60a: var(--highlight);
+  --brand-experiment-65a: var(--highlight);
+  --brand-experiment-70a: var(--highlight);
+  --brand-experiment-75a: var(--highlight);
+  --brand-experiment-80a: var(--highlight);
+  --brand-experiment-85a: var(--highlight);
+  --brand-experiment-90a: var(--highlight);
+  --brand-experiment-95a: var(--highlight);
+  --primary-630: var(--background);
+  --brand-500: var(--highlight);
+  --border-faint: rgb(var(--rgb-highlight));
+  --border-subtle: rgb(var(--rgb-highlight));
+  --app-border-frame: rgb(var(--rgb-highlight));
+  --background-modifier-accent: rgb(var(--rgb-highlight))
+}
+
+.theme-dark body {
+  background-color: var(--background);
+  background-image: var(--background-image);
+  background-position: var(--background-position);
+  background-size: var(--background-size);
+  backdrop-filter: blur(var(--background-blur)) brightness(var(--background-brightness))
+}
+
+.theme-dark .appMount__51fd7,
+.theme-dark .app__160d8,
+.theme-dark .bg__960e4,
+.theme-dark .guilds__5e434,
+.theme-dark .scroller_ef3116,
+.theme-dark .sidebar__5e434,
+.theme-dark .sidebar__5e434::after,
+.theme-dark .container__2637a,
+.theme-dark .chat_f75fb0,
+.theme-dark .chatContent_f75fb0,
+.theme-dark .title_f75fb0,
+.theme-dark .searchBar__97492,
+.theme-dark .container_c8ffbb,
+.theme-dark .members_c8ffbb,
+.theme-dark .content_f75fb0,
+.theme-dark .container__91a9d,
+.theme-dark .channelTextArea__74017,
+.theme-dark .container__133bf,
+.theme-dark .section__00943,
+.theme-dark .nowPlayingColumn__133bf,
+.theme-dark .container__7d20c,
+.theme-dark .itemCard__7e549,
+.theme-dark .section__00943,
+.theme-dark .inset_bf1984,
+.theme-dark .container__9293f,
+.theme-dark .privateChannels_e6b769,
+.theme-dark .scroller__99e7c,
+.theme-dark .layer__960e4,
+.theme-dark .standardSidebarView__23e6b,
+.theme-dark .sidebarRegionScroller__23e6b,
+.theme-dark .contentRegion__23e6b,
+.theme-dark .contentRegionScroller__23e6b,
+.theme-dark .container__4a84a,
+.theme-dark .stickyHeader_adb41f,
+.theme-dark .scroller_fb04e1,
+.theme-dark .pageWrapper_a3a4ce,
+.theme-dark .footer__214dc,
+.theme-dark .container_f369db {
+  background: rgba(0, 0, 0, 0) !important
+}
+
+.theme-dark #app-mount .wrapper__44b0c rect[fill="#593695"],
+.theme-dark #app-mount .wrapper__44b0c rect[mask*=streaming] {
+  fill: var(--streaming-color)
+}
+
+.theme-dark #app-mount .wrapper__44b0c rect[fill="#43b581"],
+.theme-dark #app-mount .wrapper__44b0c rect[mask*=online] {
+  fill: var(--online-color)
+}
+
+.theme-dark #app-mount .wrapper__44b0c rect[fill="#faa61a"],
+.theme-dark #app-mount .wrapper__44b0c rect[mask*=idle] {
+  fill: var(--afk-color)
+}
+
+.theme-dark #app-mount .wrapper__44b0c rect[fill="#f04747"],
+.theme-dark #app-mount .wrapper__44b0c rect[mask*=dnd] {
+  fill: var(--dnd-color)
+}
+
+.theme-dark .numberBadge__40d6f {
+  background-color: rgba(var(--rgb-highlight), 70%) !important;
+  color: var(--background)
+}
+
+.theme-dark .isUnread__908e2 {
+  border: 1px solid var(--highlight)
+}
+
+.theme-dark .content__908e2 {
+  color: var(--highlight)
+}
+
+.theme-dark .wrapper__2ea32:hover .unread__2ea32 {
+  background-color: var(--highlight)
+}
+
+.theme-dark .guildSeparator-33mFX6 {
+  background-color: var(--highlight);
+  border-radius: 2px
+}
+
+.theme-dark .unreadPillCapStroke__908e2 {
+  color: var(--highlight);
+  fill: var(--highlight)
+}
+
+.theme-dark .unreadPill__908e2 {
+  background-color: var(--highlight);
+  color: var(--background) !important
+}
+
+.theme-dark .bar__3b95d,
+.theme-dark .newMessagesBar__0f481 {
+  background-color: var(--highlight);
+  color: var(--background)
+}
+
+.theme-dark .membersGroup_c8ffbb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--highlight);
+  padding: 0px
+}
+
+.theme-dark .membersGroup_c8ffbb::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  margin-right: 3px;
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(var(--rgb-highlight), 0) 0%, rgba(var(--rgb-highlight), 1) 100%)
+}
+
+.theme-dark .membersGroup_c8ffbb::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  margin-left: 3px;
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(var(--rgb-highlight), 1) 0%, rgba(var(--rgb-highlight), 0) 100%)
+}
+
+.theme-dark .containerDefault__29444 {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.theme-dark .containerDefault__29444 div div {
+  color: var(--highlight)
+}
+
+.theme-dark .arrow_d64d50 {
+  display: none
+}
+
+.theme-dark .container-q97qHp .overflow_b0dfc2 {
+  max-width: 8vw
+}
+
+.theme-dark .containerDefault__29444::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  margin-right: -11px;
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(var(--rgb-highlight), 0) 0%, rgba(var(--rgb-highlight), 1) 100%)
+}
+
+.theme-dark .containerDefault__29444::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  margin-left: -3px;
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(var(--rgb-highlight), 1) 0%, rgba(var(--rgb-highlight), 0) 100%)
+}
+
+.theme-dark .panels__5e434 {
+  background-color: var(--background)
+}
+
+.theme-dark .outer_c0bea0:not(.custom-user-profile) {
+  background-color: var(--background)
+}
+
+.theme-dark .outer_c0bea0:not(.custom-user-profile) .inner_c0bea0.user-profile-modal,
+.theme-dark .outer_c0bea0:not(.custom-user-profile) .inner_c0bea0.user-profile-popout {
+  background: inherit
+}
+
+.theme-dark .reactionMe__23977 {
+  border-color: var(--highlight) !important
+}
+
+.theme-dark .reactionMe__23977 .reactionCount__23977 {
+  color: var(--background) !important
+}
+
+.theme-dark .reaction__23977,
+.theme-dark .reactionBtn__23977 {
+  border-color: rgba(var(--rgb-highlight), 30%)
+}
+
+.theme-dark .reactionBtn__23977:hover {
+  border-color: var(--rgb-highlight)
+}
+
+.theme-dark .botText__82f07,
+.theme-dark .botTagVerified__82f07 {
+  color: var(--background)
+}
+
+.theme-dark .scrollableContainer__74017 {
+  background-color: var(--background)
+}
+
+.theme-dark .replying__5126c:hover {
+  background-color: rgba(var(--rgb-highlight), 60%) !important
+}
+
+.theme-dark .ephemeral__5126c {
+  background-color: rgba(var(--rgb-highlight), 30%)
+}
+
+.theme-dark .ephemeral__5126c:hover {
+  background-color: rgba(var(--rgb-highlight), 40%) !important
+}
+
+.theme-dark .mentioned__5126c::before {
+  background-color: var(--highlight)
+}
+
+.theme-dark .autocompleteInner__13533 {
+  background-color: var(--background)
+}
+
+.theme-dark .selected_c69b6d .icon__2ea32,
+.theme-dark .selected_c69b6d .actionIcon_c69b6d:hover,
+.theme-dark .selected_c69b6d .name__2ea32 {
+  color: var(--highlight) !important
+}
+
+.theme-dark .selected_c69b6d .link__2ea32 {
+  background-color: rgba(var(--rgb-highlight), 20%) !important
+}
+
+.theme-dark .contentWrapper__08434,
+.theme-dark .header__8ef02,
+.theme-dark .header_fed6d3,
+.theme-dark .header_c0e32c,
+.theme-dark .categoryList__3ad28,
+.theme-dark .scroller_affa7e,
+.theme-dark .packHeader_e94b8c,
+.theme-dark .header_c656ac,
+.theme-dark .inspector_aeaaeb,
+.theme-dark .emojiPicker_c0e32c,
+.theme-dark .unicodeShortcut_b9ee0c,
+.theme-dark #gif-picker-tab-panel {
+  background-color: var(--background)
+}
+
+.theme-dark .emptyGuildUpsell_e94b8c {
+  background-color: var(--background);
+  border: 1px solid var(--highlight);
+  margin-bottom: 2px
+}
+
+.theme-dark .emptyGuildUpsell_e94b8c .contents__201d5 {
+  color: var(--highlight)
+}
+
+.theme-dark .categoryItemDefaultCategorySelected_b9ee0c,
+.theme-dark .stickerCategoryGenericSelected__3ad28 {
+  background-color: var(--highlight)
+}
+
+.theme-dark .categoryFadeBlurple_d02962 {
+  --bg-brand: var(--highlight)
+}
+
+.theme-dark .contentWrapper__9c62c {
+  --bg-base-secondary: var(--background);
+  --input-border: var(--highlight);
+  --text-link: var(--highlight);
+  --text-brand: var(--highlight);
+  --bg-mod-subtle: var(--highlight)
+}
+
+.theme-dark .appDetailsContainer_cb32c7 {
+  background-color: var(--background)
+}
+
+.theme-dark .children__9293f:after,
+.theme-dark .form_f75fb0::before,
+.theme-dark .option__56fec:after {
+  display: none
+}
+
+html,
+body {
+  font-family: var(--departure-font), monospace
+}
+
+img[src*="avatars/114678873605668873"]+.header_c19a55::after,
+img[src*="users/114678873605668873"]+.header_c19a55::after {
+  content: " Theme Author";
+  display: inline-block;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0ibTExLjQgMTguMTYxbDcuMzk2LTcuMzk2YTEwLjMgMTAuMyAwIDAgMS0zLjMyNi0yLjIzNGExMC4zIDEwLjMgMCAwIDEtMi4yMzUtMy4zMjdMNS44MzkgMTIuNmMtLjU3Ny41NzctLjg2Ni44NjYtMS4xMTQgMS4xODRhNi42IDYuNiAwIDAgMC0uNzQ5IDEuMjExYy0uMTczLjM2NC0uMzAyLjc1Mi0uNTYgMS41MjZsLTEuMzYyIDQuMDgzYTEuMDYgMS4wNiAwIDAgMCAxLjM0MiAxLjM0Mmw0LjA4My0xLjM2MmMuNzc1LS4yNTggMS4xNjItLjM4NyAxLjUyNi0uNTZxLjY0Ny0uMzA4IDEuMjExLS43NDljLjMxOC0uMjQ4LjYwNy0uNTM3IDEuMTg0LTEuMTE0bTkuNDQ4LTkuNDQ4YTMuOTMyIDMuOTMyIDAgMCAwLTUuNTYxLTUuNTYxbC0uODg3Ljg4N2wuMDM4LjExMWE4Ljc1IDguNzUgMCAwIDAgMi4wOTIgMy4zMmE4Ljc1IDguNzUgMCAwIDAgMy40MzEgMi4xM3oiLz48L3N2Zz4=");
+  background-size: 12px 12px;
+  background-position: 3px;
+  background-repeat: no-repeat;
+  background-color: var(--highlight);
+  color: var(--background);
+  width: 15px !important;
+  height: 13px !important;
+  padding-bottom: 5px;
+  padding-right: 3px;
+  margin-left: 5px;
+  margin-bottom: -3px;
+  font-size: 10px;
+  font-weight: 600;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 3px;
+  transition-duration: var(--transition-time)
+}
+
+img[src*="avatars/114678873605668873"]+.header_c19a55:hover::after,
+img[src*="users/114678873605668873"]+.header_c19a55:hover::after {
+  padding-left: 16px;
+  width: 70px !important
+}
+
+.title_c38106::before {
+  position: fixed;
+  left: 10px;
+  color: var(--highlight);
+  content: var(--custom-title-text);
+  font-size: calc(var(--custom-title-font-size)*var(--show-custom-title));
+  font-weight: var(--custom-title-font-weight);
+  margin-top: var(--custom-title-margin-top);
+  margin-left: var(--custom-title-margin-left);
+  display: block
+}
+
+.info__2debe:last-child::after {
+  content: "Fallout 4 Terminal 4.0.4";
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(var(--rgb-highlight))
+}
+
+/* CUSTOMIZE COLORS IN HERE! */
+:root,
+.visual-refresh,
+.visual-refresh.theme-dark {
+  --rgb-highlight: 74, 239, 152;
+  /* The main highlight color */
+  --rgb-background: 0, 9, 0;
+  /* The main background color */
+  --rgb-text: 158, 239, 152;
+  /* The color (almost) all text should use */
+  --rgb-close-button: 212, 18, 39;
+  /* The main "close this" or "deny" color */
+  --rgb-online-color: 57, 255, 20;
+  /* The color used in the "online" user status symbol */
+  --rgb-afk-color: 255, 255, 51;
+  /* The color used in the "idle" user status symbol */
+  --rgb-dnd-color: 255, 0, 0;
+  /* The color used in the "do not disturb" user status symbol */
+  --rgb-streaming-color: 188, 19, 254;
+  /* The color used in the "streaming X" user status symbol */
+
+  --transition-time: .3s;
+  /* How fast animations added by the theme happen. Default is 0.3 seconds */
+
+  --background-image: unset;
+  /* To add a background image, replace unset with a local/data URL if desired. */
+  --background-position: center;
+  /* Positions the background image */
+  --background-size: cover;
+  /* Scales the background image */
+  --background-blur: 5px;
+  /* Blurs the image which usually helps with readability of text infront of it */
+  --background-brightness: 100%;
+  /* Changes the background images brightness */
+
+  --show-original-title: 0;
+  /* Whether you want to show discords original title (0 means no, 1 means yes) */
+  --show-custom-title: 1;
+  /* Whether you want to show a custom title (0 means no, 1 means yes) */
+  --custom-title-text: "ROBCO Industries (tm)";
+  /* The custom text you want to display */
+  --custom-title-font-size: 16px;
+  /* The size in pixels of the custom title text */
+  --custom-title-font-weight: bold;
+  /* The font "weight" of the custom title text. */
+  --custom-title-margin-top: 0px;
+  /* The distance from the top of the window to the custom title text */
+  --custom-title-margin-left: 0px;
+  /* The distance from the left side of the window to the custom title text */
+}
+
+/* Disabled for RoleColors Everywhere Plugin */
+/* Enable for Green Text Everywhere */
+
+/*
+[class*="messageContent_"] {
+  color: rgb(var(--rgb-text)) !important;
+}
+*/
+
+/* DepartureMono Nerd Font for Vencord / Discord */
+
+:root {
+  --departure-font: "DepartureMono Nerd Font", "DepartureMono Nerd Font Mono", "Departure Mono Nerd Font", monospace;
+
+  --font-primary: var(--departure-font) !important;
+  --font-display: var(--departure-font) !important;
+  --font-headline: var(--departure-font) !important;
+  --font-code: var(--departure-font) !important;
+
+  /* Adjust this */
+  --departure-font-size: 13px;
+}
+
+/* Main Discord UI */
+body,
+button,
+input,
+textarea,
+select,
+::placeholder {
+  font-family: var(--departure-font) !important;
+  font-size: var(--departure-font-size) !important;
+  text-rendering: geometricPrecision;
+}
+
+/* Messages, usernames, channel names, settings, popouts */
+[class*="messageContent"],
+[class*="username"],
+[class*="name"],
+[class*="title"],
+[class*="header"],
+[class*="text"],
+[class*="label"],
+[class*="description"],
+[class*="membersGroup"],
+[class*="channelName"],
+[class*="roleName"],
+[class*="markup"] {
+  font-family: var(--departure-font) !important;
+  font-size: var(--departure-font-size) !important;
+}
+
+/* Code blocks / inline code */
+code,
+pre,
+kbd,
+samp,
+[class*="codeBlock"],
+[class*="inlineCode"] {
+  font-family: var(--departure-font) !important;
+  font-size: var(--departure-font-size) !important;
+}
+
+/* === Fallout Terminal channel-list color fix === */
+
+:root,
+.visual-refresh,
+.visual-refresh.theme-dark {
+  --channels-default: rgb(var(--rgb-text)) !important;
+  --interactive-normal: rgb(var(--rgb-text)) !important;
+  --interactive-hover: rgb(var(--rgb-highlight)) !important;
+  --interactive-active: rgb(var(--rgb-highlight)) !important;
+
+  --text-normal: rgb(var(--rgb-text)) !important;
+  --text-muted: rgba(var(--rgb-text), 0.55) !important;
+}
+
+/* Text + voice channel names */
+[class*="sidebar_"] [class*="containerDefault_"] [class*="name_"],
+[class*="sidebar_"] [class*="containerDefault_"] [class*="channelName_"],
+[class*="sidebar_"] [class*="containerDefault_"] [class*="overflow_"] {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Channel hash / voice icons */
+[class*="sidebar_"] [class*="containerDefault_"] [class*="icon_"],
+[class*="sidebar_"] [class*="containerDefault_"] svg {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Hover, selected, and unread channels */
+[class*="sidebar_"] [class*="containerDefault_"]:hover [class*="name_"],
+[class*="sidebar_"] [class*="containerDefault_"]:hover [class*="channelName_"],
+[class*="sidebar_"] [class*="containerDefault_"]:hover [class*="icon_"],
+[class*="sidebar_"] [class*="modeSelected_"] [class*="name_"],
+[class*="sidebar_"] [class*="modeSelected_"] [class*="channelName_"],
+[class*="sidebar_"] [class*="modeSelected_"] [class*="icon_"],
+[class*="sidebar_"] [class*="modeUnread"] [class*="name_"],
+[class*="sidebar_"] [class*="modeUnread"] [class*="channelName_"],
+[class*="sidebar_"] [class*="modeUnread"] [class*="icon_"] {
+  color: rgb(var(--rgb-highlight)) !important;
+}
+
+
+/* === Fallout Terminal remaining Discord UI text color fix === */
+/* Targets the remaining white text shown in server header, boost goal, chat header, search, and message input. */
+
+:root,
+.visual-refresh,
+.visual-refresh.theme-dark {
+  --header-primary: rgb(var(--rgb-text)) !important;
+  --header-secondary: rgba(var(--rgb-text), 0.75) !important;
+  --text-link: rgb(var(--rgb-highlight)) !important;
+  --input-placeholder-text: rgba(var(--rgb-text), 0.65) !important;
+}
+
+/* Server header / dropdown title */
+[class*="sidebar_"] [class*="header_"] *,
+[class*="sidebar_"] [class*="guildName_"] *,
+[class*="sidebar_"] [class*="name_"] [class*="header_"] *,
+[class*="sidebar_"] [aria-label*="Server"] *,
+[class*="sidebar_"] [aria-label*="server"] * {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Boost goal / server boost card */
+[class*="sidebar_"] [class*="boost"] *,
+[class*="sidebar_"] [class*="Boost"] *,
+[class*="sidebar_"] [class*="premium"] *,
+[class*="sidebar_"] [class*="Premium"] *,
+[class*="sidebar_"] [class*="progress"] *,
+[class*="sidebar_"] [class*="Progress"] * {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Chat/channel header title, topic, toolbar labels/icons */
+[class*="chat_"] [class*="title_"] *,
+[class*="chat_"] [class*="header_"] *,
+[class*="chat_"] [class*="topic_"] *,
+[class*="chat_"] [class*="children_"] *,
+[class*="toolbar_"] *,
+[class*="upperContainer_"] *,
+[class*="titleWrapper_"] *,
+[class*="channelName_"] *,
+[class*="nicknames_"] *,
+[class*="subtitleContainer_"] * {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Header/search icons that inherit from currentColor */
+[class*="chat_"] svg,
+[class*="toolbar_"] svg,
+[class*="search_"] svg,
+[class*="searchBar_"] svg {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Search box text + placeholder */
+[class*="search_"] input,
+[class*="searchBar_"] input,
+[class*="search_"] [class*="DraftEditor"] *,
+[class*="searchBar_"] [class*="DraftEditor"] *,
+[class*="search_"] [class*="public-DraftEditorPlaceholder"] *,
+[class*="searchBar_"] [class*="public-DraftEditorPlaceholder"] *,
+[aria-label*="Search"] input,
+[aria-label*="search"] input {
+  color: rgb(var(--rgb-text)) !important;
+  caret-color: rgb(var(--rgb-highlight)) !important;
+}
+
+[class*="search_"] input::placeholder,
+[class*="searchBar_"] input::placeholder,
+input[placeholder*="Search"]::placeholder,
+input[placeholder*="search"]::placeholder {
+  color: rgba(var(--rgb-text), 0.65) !important;
+  opacity: 1 !important;
+}
+
+/* Message input text, placeholder, attachments/options row */
+[class*="channelTextArea_"] *,
+[class*="textArea_"] *,
+[class*="slateTextArea_"] *,
+[class*="placeholder_"] *,
+[class*="form_"] [class*="buttons_"] *,
+[class*="form_"] [class*="attachButton_"] *,
+[class*="form_"] svg,
+[data-slate-editor="true"],
+[contenteditable="true"] {
+  color: rgb(var(--rgb-text)) !important;
+  caret-color: rgb(var(--rgb-highlight)) !important;
+}
+
+[class*="channelTextArea_"] [class*="placeholder_"],
+[class*="textArea_"] [class*="placeholder_"],
+[data-slate-placeholder="true"],
+[aria-label^="Message"]::before {
+  color: rgba(var(--rgb-text), 0.65) !important;
+  opacity: 1 !important;
+}
+
+/* ========================================================================== */
+/* === Fallout Terminal full Settings / Menus / Popouts skin pass ============ */
+/* ========================================================================== */
+
+:root,
+.visual-refresh,
+.visual-refresh.theme-dark {
+  /* Old Discord variables */
+  --background-primary: rgb(var(--rgb-background)) !important;
+  --background-secondary: rgba(var(--rgb-background), 0.96) !important;
+  --background-secondary-alt: rgba(var(--rgb-background), 0.98) !important;
+  --background-tertiary: #000000 !important;
+  --background-accent: rgba(var(--rgb-highlight), 0.22) !important;
+  --background-floating: #000000 !important;
+  --background-mobile-primary: rgb(var(--rgb-background)) !important;
+  --background-mobile-secondary: #000000 !important;
+  --modal-background: rgb(var(--rgb-background)) !important;
+  --modal-footer-background: #000000 !important;
+  --input-background: #000000 !important;
+  --channeltextarea-background: #000000 !important;
+
+  /* Newer visual-refresh variables */
+  --bg-base-primary: rgb(var(--rgb-background)) !important;
+  --bg-base-secondary: #000000 !important;
+  --bg-base-tertiary: #000000 !important;
+  --background-base-lowest: #000000 !important;
+  --background-base-lower: rgb(var(--rgb-background)) !important;
+  --background-base-low: rgba(var(--rgb-background), 0.96) !important;
+  --background-surface-high: rgba(var(--rgb-background), 0.92) !important;
+  --background-surface-higher: rgba(var(--rgb-background), 0.96) !important;
+  --background-surface-highest: #000000 !important;
+
+  /* Text / borders / interaction */
+  --text-primary: rgb(var(--rgb-text)) !important;
+  --text-secondary: rgba(var(--rgb-text), 0.78) !important;
+  --text-tertiary: rgba(var(--rgb-text), 0.6) !important;
+  --text-muted: rgba(var(--rgb-text), 0.55) !important;
+  --header-primary: rgb(var(--rgb-text)) !important;
+  --header-secondary: rgba(var(--rgb-text), 0.75) !important;
+  --text-link: rgb(var(--rgb-highlight)) !important;
+  --interactive-normal: rgb(var(--rgb-text)) !important;
+  --interactive-hover: rgb(var(--rgb-highlight)) !important;
+  --interactive-active: rgb(var(--rgb-highlight)) !important;
+  --interactive-muted: rgba(var(--rgb-text), 0.35) !important;
+  --background-modifier-hover: rgba(var(--rgb-highlight), 0.10) !important;
+  --background-modifier-active: rgba(var(--rgb-highlight), 0.16) !important;
+  --background-modifier-selected: rgba(var(--rgb-highlight), 0.20) !important;
+  --background-modifier-accent: rgba(var(--rgb-highlight), 0.22) !important;
+  --border-subtle: rgba(var(--rgb-highlight), 0.18) !important;
+  --border-normal: rgba(var(--rgb-highlight), 0.28) !important;
+  --border-strong: rgba(var(--rgb-highlight), 0.45) !important;
+
+  /* Make Discord's blurple controls terminal-green. */
+  --brand-260: rgb(var(--rgb-highlight)) !important;
+  --brand-360: rgb(var(--rgb-highlight)) !important;
+  --brand-400: rgb(var(--rgb-highlight)) !important;
+  --brand-500: rgb(var(--rgb-highlight)) !important;
+  --brand-560: rgb(var(--rgb-highlight)) !important;
+  --brand-600: rgb(var(--rgb-highlight)) !important;
+  --brand-experiment: rgb(var(--rgb-highlight)) !important;
+  --button-positive-background: rgba(var(--rgb-highlight), 0.22) !important;
+  --button-positive-background-hover: rgba(var(--rgb-highlight), 0.32) !important;
+  --button-secondary-background: rgba(var(--rgb-highlight), 0.12) !important;
+  --button-secondary-background-hover: rgba(var(--rgb-highlight), 0.22) !important;
+  --button-danger-background: rgba(var(--rgb-close-button), 0.82) !important;
+  --button-danger-background-hover: rgb(var(--rgb-close-button)) !important;
+
+  --scrollbar-auto-thumb: rgba(var(--rgb-highlight), 0.38) !important;
+  --scrollbar-auto-track: rgba(0, 0, 0, 0.2) !important;
+  --scrollbar-thin-thumb: rgba(var(--rgb-highlight), 0.42) !important;
+  --scrollbar-thin-track: transparent !important;
+}
+
+/* Base settings view: user settings, server settings, Vencord settings. */
+[class*="standardSidebarView_"],
+[class*="sidebarRegion_"],
+[class*="sidebarRegionScroller_"],
+[class*="contentRegion_"],
+[class*="contentRegionScroller_"],
+[class*="contentColumn_"],
+[class*="customColumn_"],
+[class*="toolsContainer_"] {
+  background: rgb(var(--rgb-background)) !important;
+  color: rgb(var(--rgb-text)) !important;
+  font-family: var(--departure-font) !important;
+}
+
+[class*="standardSidebarView_"] {
+  position: relative !important;
+}
+
+/* Subtle scanlines inside settings. */
+[class*="standardSidebarView_"]::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  opacity: 0.34;
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(var(--rgb-text), 0.045) 0px,
+      rgba(var(--rgb-text), 0.045) 1px,
+      transparent 1px,
+      transparent 4px);
+}
+
+[class*="standardSidebarView_"] [class*="sidebarRegion_"] {
+  border-right: 1px solid rgba(var(--rgb-highlight), 0.20) !important;
+}
+
+[class*="standardSidebarView_"] [class*="contentRegion_"] {
+  border-left: 1px solid rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Force settings text to terminal green without touching normal chat message colors. */
+[class*="standardSidebarView_"] :is(h1, h2, h3, h4, h5, h6, div, span, p, label, legend, strong, small, code, pre, a),
+[class*="layerContainer_"] :is(h1, h2, h3, h4, h5, h6, div, span, p, label, legend, strong, small, code, pre, a) {
+  font-family: var(--departure-font) !important;
+}
+
+[class*="standardSidebarView_"] :is(h1, h2, h3, h4, h5, h6, label, legend, strong),
+[class*="standardSidebarView_"] [class*="title_"],
+[class*="standardSidebarView_"] [class*="heading_"],
+[class*="standardSidebarView_"] [class*="header_"],
+[class*="standardSidebarView_"] [class*="label_"],
+[class*="layerContainer_"] :is(h1, h2, h3, h4, h5, h6, label, legend, strong),
+[class*="layerContainer_"] [class*="title_"],
+[class*="layerContainer_"] [class*="heading_"],
+[class*="layerContainer_"] [class*="header_"],
+[class*="layerContainer_"] [class*="label_"] {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+[class*="standardSidebarView_"] [class*="description_"],
+[class*="standardSidebarView_"] [class*="subText_"],
+[class*="standardSidebarView_"] [class*="note_"],
+[class*="standardSidebarView_"] [class*="formText_"],
+[class*="standardSidebarView_"] [class*="helpText_"],
+[class*="layerContainer_"] [class*="description_"],
+[class*="layerContainer_"] [class*="subText_"],
+[class*="layerContainer_"] [class*="note_"],
+[class*="layerContainer_"] [class*="formText_"],
+[class*="layerContainer_"] [class*="helpText_"] {
+  color: rgba(var(--rgb-text), 0.68) !important;
+}
+
+[class*="standardSidebarView_"] a,
+[class*="layerContainer_"] a {
+  color: rgb(var(--rgb-highlight)) !important;
+}
+
+[class*="standardSidebarView_"] svg,
+[class*="layerContainer_"] svg {
+  color: currentColor !important;
+}
+
+/* Settings left nav. */
+[class*="standardSidebarView_"] [class*="side_"] [class*="header_"] {
+  color: rgba(var(--rgb-text), 0.65) !important;
+  letter-spacing: 0.04em !important;
+}
+
+[class*="standardSidebarView_"] [class*="side_"] [class*="item_"] {
+  color: rgba(var(--rgb-text), 0.78) !important;
+  background: transparent !important;
+  border-left: 2px solid transparent !important;
+  border-radius: 6px !important;
+}
+
+[class*="standardSidebarView_"] [class*="side_"] [class*="item_"]:hover {
+  color: rgb(var(--rgb-highlight)) !important;
+  background: rgba(var(--rgb-highlight), 0.10) !important;
+  border-left-color: rgba(var(--rgb-highlight), 0.55) !important;
+}
+
+[class*="standardSidebarView_"] [class*="side_"] [class*="item_"][class*="selected_"],
+[class*="standardSidebarView_"] [class*="side_"] [class*="selected_"] {
+  color: rgb(var(--rgb-highlight)) !important;
+  background: rgba(var(--rgb-highlight), 0.18) !important;
+  border-left-color: rgb(var(--rgb-highlight)) !important;
+  text-shadow: 0 0 8px rgba(var(--rgb-highlight), 0.45) !important;
+}
+
+[class*="standardSidebarView_"] [class*="separator_"] {
+  background-color: rgba(var(--rgb-highlight), 0.22) !important;
+}
+
+/* Settings cards, account panels, profile cards, payment cards, plugin/theme cards. */
+[class*="standardSidebarView_"] [class*="accountProfileCard_"],
+[class*="standardSidebarView_"] [class*="profileCard_"],
+[class*="standardSidebarView_"] [class*="userProfileOuter_"],
+[class*="standardSidebarView_"] [class*="userProfileInner_"],
+[class*="standardSidebarView_"] [class*="fieldList_"],
+[class*="standardSidebarView_"] [class*="background_"],
+[class*="standardSidebarView_"] [class*="card_"],
+[class*="standardSidebarView_"] [class*="container_"],
+[class*="standardSidebarView_"] [class*="section_"],
+[class*="standardSidebarView_"] [class*="settingCard_"],
+[class*="standardSidebarView_"] [class*="pluginCard_"],
+[class*="standardSidebarView_"] [class*="themeCard_"],
+[class*="standardSidebarView_"] [class*="shopCard_"],
+[class*="standardSidebarView_"] [class*="paymentPane_"],
+[class*="standardSidebarView_"] [class*="paymentRow_"],
+[class*="standardSidebarView_"] [class*="membershipDialog_"] {
+  background-color: rgba(0, 0, 0, 0.62) !important;
+  border: 1px solid rgba(var(--rgb-highlight), 0.24) !important;
+  box-shadow: inset 0 0 18px rgba(var(--rgb-highlight), 0.045), 0 0 14px rgba(0, 0, 0, 0.45) !important;
+  color: rgb(var(--rgb-text)) !important;
+}
+
+[class*="standardSidebarView_"] [class*="banner_"] {
+  background:
+    linear-gradient(90deg, rgba(var(--rgb-highlight), 0.10), rgba(0, 0, 0, 0.85)),
+    #000000 !important;
+  border-bottom: 1px solid rgba(var(--rgb-highlight), 0.25) !important;
+}
+
+/* Tabs, including Security / Standing shown in your screenshot. */
+[class*="standardSidebarView_"] [class*="tabBar_"] [class*="item_"],
+[class*="standardSidebarView_"] [class*="topPill_"] [class*="item_"],
+[class*="layerContainer_"] [class*="tabBar_"] [class*="item_"] {
+  color: rgba(var(--rgb-text), 0.72) !important;
+  border-bottom-color: transparent !important;
+}
+
+[class*="standardSidebarView_"] [class*="tabBar_"] [class*="item_"]:hover,
+[class*="standardSidebarView_"] [class*="topPill_"] [class*="item_"]:hover,
+[class*="layerContainer_"] [class*="tabBar_"] [class*="item_"]:hover {
+  color: rgb(var(--rgb-highlight)) !important;
+  background: rgba(var(--rgb-highlight), 0.10) !important;
+}
+
+[class*="standardSidebarView_"] [class*="tabBar_"] [class*="item_"][class*="selected_"],
+[class*="standardSidebarView_"] [class*="topPill_"] [class*="item_"][class*="selected_"],
+[class*="layerContainer_"] [class*="tabBar_"] [class*="item_"][class*="selected_"] {
+  color: rgb(var(--rgb-highlight)) !important;
+  border-bottom-color: rgb(var(--rgb-highlight)) !important;
+  background: transparent !important;
+  text-shadow: 0 0 8px rgba(var(--rgb-highlight), 0.45) !important;
+}
+
+/* Inputs, search boxes, selects, dropdowns. */
+[class*="standardSidebarView_"] input,
+[class*="standardSidebarView_"] textarea,
+[class*="standardSidebarView_"] select,
+[class*="standardSidebarView_"] [class*="input_"],
+[class*="standardSidebarView_"] [class*="textArea_"],
+[class*="standardSidebarView_"] [class*="select_"],
+[class*="standardSidebarView_"] [class*="dropdown_"],
+[class*="standardSidebarView_"] [class*="searchBar_"],
+[class*="layerContainer_"] input,
+[class*="layerContainer_"] textarea,
+[class*="layerContainer_"] select,
+[class*="layerContainer_"] [class*="input_"],
+[class*="layerContainer_"] [class*="textArea_"],
+[class*="layerContainer_"] [class*="select_"],
+[class*="layerContainer_"] [class*="dropdown_"],
+[class*="layerContainer_"] [class*="searchBar_"] {
+  background: #000000 !important;
+  color: rgb(var(--rgb-text)) !important;
+  caret-color: rgb(var(--rgb-highlight)) !important;
+  border-color: rgba(var(--rgb-highlight), 0.30) !important;
+  font-family: var(--departure-font) !important;
+}
+
+[class*="standardSidebarView_"] input:focus,
+[class*="standardSidebarView_"] textarea:focus,
+[class*="standardSidebarView_"] [class*="input_"]:focus,
+[class*="layerContainer_"] input:focus,
+[class*="layerContainer_"] textarea:focus,
+[class*="layerContainer_"] [class*="input_"]:focus {
+  border-color: rgb(var(--rgb-highlight)) !important;
+  box-shadow: 0 0 0 1px rgba(var(--rgb-highlight), 0.45), 0 0 12px rgba(var(--rgb-highlight), 0.18) !important;
+}
+
+[class*="standardSidebarView_"] input::placeholder,
+[class*="standardSidebarView_"] textarea::placeholder,
+[class*="layerContainer_"] input::placeholder,
+[class*="layerContainer_"] textarea::placeholder {
+  color: rgba(var(--rgb-text), 0.55) !important;
+  opacity: 1 !important;
+}
+
+/* Buttons in settings, modals, popouts. */
+[class*="standardSidebarView_"] button,
+[class*="standardSidebarView_"] [class*="button_"],
+[class*="layerContainer_"] button,
+[class*="layerContainer_"] [class*="button_"] {
+  font-family: var(--departure-font) !important;
+  border-radius: 6px !important;
+  color: rgb(var(--rgb-text)) !important;
+  border: 1px solid rgba(var(--rgb-highlight), 0.40) !important;
+  box-shadow: none !important;
+}
+
+[class*="standardSidebarView_"] [class*="lookFilled_"],
+[class*="standardSidebarView_"] [class*="colorBrand_"],
+[class*="layerContainer_"] [class*="lookFilled_"],
+[class*="layerContainer_"] [class*="colorBrand_"] {
+  background: rgba(var(--rgb-highlight), 0.22) !important;
+  color: rgb(var(--rgb-text)) !important;
+}
+
+[class*="standardSidebarView_"] [class*="lookFilled_"]:hover,
+[class*="standardSidebarView_"] [class*="colorBrand_"]:hover,
+[class*="layerContainer_"] [class*="lookFilled_"]:hover,
+[class*="layerContainer_"] [class*="colorBrand_"]:hover {
+  background: rgba(var(--rgb-highlight), 0.34) !important;
+  color: rgb(var(--rgb-highlight)) !important;
+  box-shadow: 0 0 12px rgba(var(--rgb-highlight), 0.20) !important;
+}
+
+[class*="standardSidebarView_"] [class*="lookOutlined_"],
+[class*="standardSidebarView_"] [class*="lookLink_"],
+[class*="layerContainer_"] [class*="lookOutlined_"],
+[class*="layerContainer_"] [class*="lookLink_"] {
+  background: transparent !important;
+  color: rgb(var(--rgb-highlight)) !important;
+  border-color: rgba(var(--rgb-highlight), 0.48) !important;
+}
+
+/* Red destructive buttons stay red. */
+[class*="standardSidebarView_"] [class*="colorRed_"],
+[class*="standardSidebarView_"] [class*="danger_"],
+[class*="layerContainer_"] [class*="colorRed_"],
+[class*="layerContainer_"] [class*="danger_"] {
+  background: rgba(var(--rgb-close-button), 0.18) !important;
+  color: rgb(255, 96, 96) !important;
+  border-color: rgba(var(--rgb-close-button), 0.72) !important;
+}
+
+[class*="standardSidebarView_"] [class*="colorRed_"]:hover,
+[class*="standardSidebarView_"] [class*="danger_"]:hover,
+[class*="layerContainer_"] [class*="colorRed_"]:hover,
+[class*="layerContainer_"] [class*="danger_"]:hover {
+  background: rgba(var(--rgb-close-button), 0.32) !important;
+  color: #ffffff !important;
+}
+
+/* Settings close button. */
+[class*="standardSidebarView_"] [class*="closeButton_"],
+[class*="standardSidebarView_"] [aria-label="Close"],
+[class*="toolsContainer_"] [class*="closeButton_"] {
+  background: transparent !important;
+  color: rgba(var(--rgb-text), 0.72) !important;
+  border: 1px solid rgba(var(--rgb-highlight), 0.28) !important;
+}
+
+[class*="standardSidebarView_"] [class*="closeButton_"]:hover,
+[class*="standardSidebarView_"] [aria-label="Close"]:hover,
+[class*="toolsContainer_"] [class*="closeButton_"]:hover {
+  color: rgb(var(--rgb-close-button)) !important;
+  border-color: rgba(var(--rgb-close-button), 0.70) !important;
+  background: rgba(var(--rgb-close-button), 0.14) !important;
+}
+
+/* Switches, checkboxes, radios, sliders. */
+[class*="standardSidebarView_"] [class*="checkbox_"],
+[class*="standardSidebarView_"] [class*="radioBar_"],
+[class*="standardSidebarView_"] [class*="slider_"],
+[class*="standardSidebarView_"] [class*="bar_"],
+[class*="layerContainer_"] [class*="checkbox_"],
+[class*="layerContainer_"] [class*="radioBar_"],
+[class*="layerContainer_"] [class*="slider_"],
+[class*="layerContainer_"] [class*="bar_"] {
+  border-color: rgba(var(--rgb-highlight), 0.42) !important;
+  color: rgb(var(--rgb-text)) !important;
+}
+
+[class*="standardSidebarView_"] [class*="checked_"],
+[class*="standardSidebarView_"] [class*="selected_"],
+[class*="layerContainer_"] [class*="checked_"],
+[class*="layerContainer_"] [class*="selected_"] {
+  border-color: rgb(var(--rgb-highlight)) !important;
+}
+
+[class*="standardSidebarView_"] [class*="slider_"] [class*="grabber_"],
+[class*="layerContainer_"] [class*="slider_"] [class*="grabber_"] {
+  background: rgb(var(--rgb-highlight)) !important;
+  border-color: #000000 !important;
+  box-shadow: 0 0 10px rgba(var(--rgb-highlight), 0.55) !important;
+}
+
+/* Modals, popouts, dropdown menus, context menus, autocomplete, emoji/sticker/gif picker. */
+[class*="layerContainer_"] [role="dialog"],
+[class*="layerContainer_"] [role="menu"],
+[class*="layerContainer_"] [class*="modal_"],
+[class*="layerContainer_"] [class*="root_"],
+[class*="layerContainer_"] [class*="popout_"],
+[class*="layerContainer_"] [class*="menu_"],
+[class*="layerContainer_"] [class*="submenu_"],
+[class*="layerContainer_"] [class*="drawerSizingWrapper_"],
+[class*="layerContainer_"] [class*="autocomplete_"],
+[class*="layerContainer_"] [class*="messagesPopoutWrap_"],
+[class*="layerContainer_"] [class*="browser_"],
+[class*="layerContainer_"] [class*="picker_"],
+[class*="layerContainer_"] [class*="emojiPicker_"],
+[class*="layerContainer_"] [class*="contentWrapper_"] {
+  background: rgba(0, 0, 0, 0.96) !important;
+  color: rgb(var(--rgb-text)) !important;
+  border: 1px solid rgba(var(--rgb-highlight), 0.30) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.75), inset 0 0 18px rgba(var(--rgb-highlight), 0.05) !important;
+}
+
+[class*="layerContainer_"] [class*="header_"],
+[class*="layerContainer_"] [class*="footer_"],
+[class*="layerContainer_"] [class*="scroller_"],
+[class*="layerContainer_"] [class*="list_"],
+[class*="layerContainer_"] [class*="results_"],
+[class*="layerContainer_"] [class*="option_"],
+[class*="layerContainer_"] [class*="categoryList_"],
+[class*="layerContainer_"] [class*="nav_"] {
+  background-color: transparent !important;
+}
+
+[class*="layerContainer_"] [role="menuitem"],
+[class*="layerContainer_"] [role="menuitemcheckbox"],
+[class*="layerContainer_"] [role="menuitemradio"],
+[class*="layerContainer_"] [class*="item_"],
+[class*="layerContainer_"] [class*="option_"],
+[class*="layerContainer_"] [class*="row_"],
+[class*="layerContainer_"] [class*="result_"],
+[class*="layerContainer_"] [class*="categoryItem_"] {
+  color: rgba(var(--rgb-text), 0.84) !important;
+  background: transparent !important;
+  border-radius: 4px !important;
+}
+
+[class*="layerContainer_"] [role="menuitem"]:hover,
+[class*="layerContainer_"] [role="menuitemcheckbox"]:hover,
+[class*="layerContainer_"] [role="menuitemradio"]:hover,
+[class*="layerContainer_"] [class*="item_"]:hover,
+[class*="layerContainer_"] [class*="option_"]:hover,
+[class*="layerContainer_"] [class*="row_"]:hover,
+[class*="layerContainer_"] [class*="result_"]:hover,
+[class*="layerContainer_"] [class*="categoryItem_"]:hover,
+[class*="layerContainer_"] [class*="focused_"],
+[class*="layerContainer_"] [class*="selected_"] {
+  color: rgb(var(--rgb-highlight)) !important;
+  background: rgba(var(--rgb-highlight), 0.14) !important;
+}
+
+/* Tooltips. */
+[class*="tooltip_"],
+[class*="tooltipPrimary_"],
+[class*="tooltipBlack_"] {
+  background: #000000 !important;
+  color: rgb(var(--rgb-text)) !important;
+  border: 1px solid rgba(var(--rgb-highlight), 0.45) !important;
+  font-family: var(--departure-font) !important;
+}
+
+[class*="tooltipPointer_"] {
+  border-top-color: rgba(var(--rgb-highlight), 0.45) !important;
+}
+
+/* Scrollbars in settings and overlay menus. */
+[class*="standardSidebarView_"] ::-webkit-scrollbar,
+[class*="layerContainer_"] ::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+[class*="standardSidebarView_"] ::-webkit-scrollbar-track,
+[class*="layerContainer_"] ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.35) !important;
+}
+
+[class*="standardSidebarView_"] ::-webkit-scrollbar-thumb,
+[class*="layerContainer_"] ::-webkit-scrollbar-thumb {
+  background: rgba(var(--rgb-highlight), 0.36) !important;
+  border: 2px solid #000000 !important;
+}
+
+[class*="standardSidebarView_"] ::-webkit-scrollbar-thumb:hover,
+[class*="layerContainer_"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--rgb-highlight), 0.58) !important;
+}
+
+/* Selection highlight. */
+::selection {
+  color: #000000 !important;
+  background: rgb(var(--rgb-highlight)) !important;
+}
+
+/* === Make Discord titlebar / top header text green === */
+
+/* App/window titlebar text */
+[class*="titleBar_"] *,
+[class*="typeWindows_"] *,
+[class*="wordmarkWindows_"] *,
+[class*="winButton_"] {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Server name / top-left server header */
+[class*="sidebar_"] [class*="header_"] *,
+[class*="sidebar_"] [class*="headerContent_"] *,
+[class*="sidebar_"] [class*="guildName_"] *,
+[class*="sidebar_"] [class*="name_"],
+[class*="sidebar_"] [class*="title_"] {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Current channel title/header row */
+[class*="container_"] [class*="title_"] *,
+[class*="container_"] [class*="children_"] *,
+[class*="chat_"] [class*="title_"] *,
+[class*="chat_"] [class*="header_"] *,
+[class*="chat_"] [class*="channelName_"] * {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Header icons */
+[class*="titleBar_"] svg,
+[class*="toolbar_"] svg,
+[class*="children_"] svg,
+[class*="upperContainer_"] svg {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* === Force top-bar / header icons green === */
+
+/* Header icon wrappers/buttons */
+[class*="toolbar_"],
+[class*="toolbar_"] *,
+[class*="upperContainer_"],
+[class*="upperContainer_"] *,
+[class*="children_"],
+[class*="children_"] *,
+[class*="iconWrapper_"],
+[class*="iconWrapper_"] *,
+[class*="clickable_"],
+[class*="clickable_"] *,
+[class*="search_"],
+[class*="searchBar_"] {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Top-bar SVG icons */
+[class*="toolbar_"] svg,
+[class*="upperContainer_"] svg,
+[class*="children_"] svg,
+[class*="iconWrapper_"] svg,
+[class*="clickable_"] svg,
+[class*="search_"] svg,
+[class*="searchBar_"] svg {
+  color: rgb(var(--rgb-text)) !important;
+}
+
+/* Stubborn SVG internals */
+[class*="toolbar_"] svg path,
+[class*="toolbar_"] svg circle,
+[class*="toolbar_"] svg rect,
+[class*="toolbar_"] svg polygon,
+[class*="toolbar_"] svg line,
+[class*="toolbar_"] svg polyline,
+[class*="upperContainer_"] svg path,
+[class*="upperContainer_"] svg circle,
+[class*="upperContainer_"] svg rect,
+[class*="upperContainer_"] svg polygon,
+[class*="upperContainer_"] svg line,
+[class*="upperContainer_"] svg polyline,
+[class*="children_"] svg path,
+[class*="children_"] svg circle,
+[class*="children_"] svg rect,
+[class*="children_"] svg polygon,
+[class*="children_"] svg line,
+[class*="children_"] svg polyline,
+[class*="iconWrapper_"] svg path,
+[class*="iconWrapper_"] svg circle,
+[class*="iconWrapper_"] svg rect,
+[class*="iconWrapper_"] svg polygon,
+[class*="iconWrapper_"] svg line,
+[class*="iconWrapper_"] svg polyline,
+[class*="search_"] svg path,
+[class*="search_"] svg circle,
+[class*="search_"] svg rect,
+[class*="searchBar_"] svg path,
+[class*="searchBar_"] svg circle,
+[class*="searchBar_"] svg rect {
+  color: rgb(var(--rgb-text)) !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Hover/active top icons */
+[class*="toolbar_"] [class*="clickable_"]:hover,
+[class*="toolbar_"] [class*="selected_"],
+[class*="toolbar_"] [class*="active_"],
+[class*="upperContainer_"] [class*="clickable_"]:hover,
+[class*="children_"] [class*="clickable_"]:hover {
+  color: rgb(var(--rgb-highlight)) !important;
+}
+
+/* ========================================================================== */
+/* === Local CRT scanline overlay =========================================== */
+/* Inlined replacement for the remote crtEffect.css import.                  */
+/* Uses fixed positioning so the overlay covers Discord's full Electron app. */
+/* ========================================================================== */
+
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2147483647;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* === Bottom-left user panel / voice controls / activity controls fix === */
+
+[class*="panels_"] button,
+[class*="panels_"] [role="button"],
+[class*="panels_"] [class*="button_"],
+[class*="panels_"] [class*="actionButton_"],
+[class*="panels_"] [class*="iconButton_"],
+[aria-label="User Settings"],
+[aria-label="Mute"],
+[aria-label="Unmute"],
+[aria-label="Deafen"],
+[aria-label="Undeafen"],
+[aria-label="Disconnect"],
+[aria-label="Screen Share"],
+[aria-label="Stop Streaming"],
+[aria-label="Noise Suppression powered by Krisp"],
+[aria-label="Start An Activity"] {
+  background: transparent !important;
+  color: rgb(var(--rgb-text)) !important;
+  border-color: transparent !important;
+}
+
+[class*="panels_"] button:hover,
+[class*="panels_"] [role="button"]:hover,
+[class*="panels_"] [class*="button_"]:hover,
+[class*="panels_"] [class*="actionButton_"]:hover,
+[class*="panels_"] [class*="iconButton_"]:hover,
+[aria-label="User Settings"]:hover,
+[aria-label="Mute"]:hover,
+[aria-label="Unmute"]:hover,
+[aria-label="Deafen"]:hover,
+[aria-label="Undeafen"]:hover,
+[aria-label="Disconnect"]:hover,
+[aria-label="Screen Share"]:hover,
+[aria-label="Stop Streaming"]:hover,
+[aria-label="Noise Suppression powered by Krisp"]:hover,
+[aria-label="Start An Activity"]:hover {
+  background: rgba(var(--rgb-highlight), 0.14) !important;
+  color: rgb(var(--rgb-highlight)) !important;
+  box-shadow: 0 0 10px rgba(var(--rgb-highlight), 0.14) !important;
+}
+
+[class*="panels_"] svg,
+[class*="panels_"] svg *,
+[class*="panels_"] path,
+[class*="panels_"] circle,
+[class*="panels_"] rect,
+[class*="panels_"] polygon,
+[class*="panels_"] line,
+[class*="panels_"] polyline,
+[class*="panels_"] [class*="icon_"],
+[class*="panels_"] [class*="icon_"] *,
+[class*="panels_"] [class*="lottieIcon_"] svg,
+[class*="panels_"] [class*="lottieIcon_"] svg * {
+  color: rgb(var(--rgb-text)) !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+[class*="panels_"] button:hover svg,
+[class*="panels_"] button:hover svg *,
+[class*="panels_"] [role="button"]:hover svg,
+[class*="panels_"] [role="button"]:hover svg *,
+[class*="panels_"] [class*="button_"]:hover svg,
+[class*="panels_"] [class*="button_"]:hover svg * {
+  color: rgb(var(--rgb-highlight)) !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
