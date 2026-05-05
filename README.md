@@ -1,22 +1,36 @@
 <div align="center">
   <a href="https://github.com/STRHercules" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Profile-0b0f0b?style=for-the-badge&logo=github&logoColor=9eef98&labelColor=050805" />
+  <img src="https://img.shields.io/badge/GitHub-Profile-0b0f0b?style=for-the-badge&logo=github&logoColor=9eef98&labelColor=050805"/>
 </a>
 
 <a href="https://store.steampowered.com/app/4458750/Wardens_of_Wen/" target="_blank">
-  <img src="https://img.shields.io/badge/Wardens%20of%20Wen-On%20Steam-0b0f0b?style=for-the-badge&logo=steam&logoColor=9eef98&labelColor=050805" />
+  <img src="https://img.shields.io/badge/Wardens%20of%20Wen-On%20Steam-0b0f0b?style=for-the-badge&logo=steam&logoColor=9eef98&labelColor=050805"/>
 </a>
 
 <a href="https://linktr.ee/wardensofwen" target="_blank">
-  <img src="https://img.shields.io/badge/Linktree-Links-0b0f0b?style=for-the-badge&logo=linktree&logoColor=9eef98&labelColor=050805" />
+  <img src="https://img.shields.io/badge/Linktree-Links-0b0f0b?style=for-the-badge&logo=linktree&logoColor=9eef98&labelColor=050805"/>
 </a>
   <a href="https://discord.gg/XRnuHY5uuS" target="_blank">
-  <img src="https://img.shields.io/discord/1441671903948439595?label=Discord&logo=discord&style=for-the-badge&color=0b0f0b&labelColor=050805&logoColor=9eef98" />
+  <img src="https://img.shields.io/discord/1441671903948439595?label=Discord&logo=discord&style=for-the-badge&color=0b0f0b&labelColor=050805&logoColor=9eef98"/>
 </a>
 </div>
 <h1 align="center">Fallout 4 Terminal Theme</h1>
-<img src="Screenshots/Main.png">
-<img src="Screenshots/Settings.png">
+
+```text
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║              ROBCO INDUSTRIES TERMINAL INTERFACE             ║
+║                                                              ║
+║                  FALLOUT 4 TERMINAL THEME                    ║
+║                                                              ║
+║                    STATUS: ONLINE                            ║
+║                    BUILD:  RESTORED                          ║
+║                    THEME:  TERMINAL GREEN                    ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+``` 
+<img align="center" src="Screenshots/Main.png">
+<img align="center" src="Screenshots/Settings.png">
 
 
 
