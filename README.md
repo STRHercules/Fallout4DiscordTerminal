@@ -201,11 +201,3 @@ The original theme was made by:
 </a>
 
 ---
-
-```text
-> NOTE
-```
-
-GitHub README files cannot reliably force a custom local font such as DepartureMono Nerd Font globally because GitHub strips custom CSS, style tags, external font imports, and `@font-face` rules.
-
-For a true forced-font terminal presentation, use an SVG banner or GitHub Pages site.
