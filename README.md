@@ -37,10 +37,12 @@ Installing betterdiscord themes is really easy!
 <h2>Customization</h2>
 
 You can easily customize this theme by editing the .theme.css file! Just change the variables to whatever you want!
-<img src="Screenshots/Variables.png">
+
+<img align="center" src="Screenshots/Variables.png">
 
 Uncomment the bottom block like so;
-<img src="Screenshots/Block.png">
+
+<img align="center" src="Screenshots/Block.png">
 
 To restore all-green text.
 
