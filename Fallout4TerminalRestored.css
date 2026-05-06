@@ -19,7 +19,11 @@
   --rgb-background: 0, 9, 0;
   --rgb-text: 158, 239, 152;
   --departure-font: "DepartureMono Nerd Font", "DepartureMono Nerd Font Mono", "Departure Mono Nerd Font", monospace;
+
+  /* This will need to be adjusted per device */
+  /*
   --departure-font-size: 13px;
+  */
 }
 
 /* ========================================================================== */
