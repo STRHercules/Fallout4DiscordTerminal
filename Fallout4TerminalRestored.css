@@ -62,7 +62,10 @@
   --show-original-title: 0;
   --show-custom-title: 1;
   --custom-title-text: "ROBCO Industries (tm)";
+  /* This will need to be adjusted per device */
+  /*
   --custom-title-font-size: 16px;
+  */
   --custom-title-font-weight: bold;
   --custom-title-margin-top: 0px;
   --custom-title-margin-left: 0px;
@@ -672,7 +675,10 @@ img[src*="users/114678873605668873"]+.header_c19a55:hover::after {
   --font-code: var(--departure-font) !important;
 
   /* Adjust this */
+  /* This will need to be adjusted per device */
+  /*
   --departure-font-size: 13px;
+  */
 }
 
 /* Main Discord UI */
